@@ -1,59 +1,100 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# FretBox Laravel Intern Task — Friends API
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A simple and clean RESTful API built using **Laravel** and **MySQL** that manages a list of friends with:
 
-## About Laravel
+✔ CRUD Operations  
+✔ Pagination  
+✔ Search Functionality  
+✔ API Resource Routing  
+✔ Validation and JSON responses  
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This project demonstrates backend knowledge and Laravel fundamentals required for the **Laravel Developer Intern role** at **FretBox**.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🚀 Tech Stack
 
-## Learning Laravel
+| Technology | Purpose |
+|-----------|---------|
+| Laravel 12 | Backend Framework |
+| PHP 8+ | Core Language |
+| MySQL | Database |
+| Thunder Client / Postman | API Testing |
+| Git & GitHub | Version Control |
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 📡 API Endpoints
 
-## Laravel Sponsors
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/friends` | Get all friends (Paginated) |
+| GET | `/api/friends?search=query` | Search by name or email |
+| POST | `/api/friends` | Add a new friend |
+| GET | `/api/friends/{id}` | Get friend details |
+| PUT / PATCH | `/api/friends/{id}` | Update friend |
+| DELETE | `/api/friends/{id}` | Delete a friend |
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## 🧪 Sample JSON Payloads
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### ➕ Create Friend (POST)
+```json
+{
+  "name": "Sneha Namdeo",
+  "email": "sneha_n@example.com",
+  "phone": "9876543210"
+}
+```
+---
+##🧾 Screenshots (Proof of API Testing)
 
-## Contributing
+API Testing screenshots are included inside:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+📂 api-tests/
 
-## Code of Conduct
+Includes:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+POST (Add Friend)
 
-## Security Vulnerabilities
+GET (List + Pagination)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Search
 
-## License
+PUT (Update)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+DELETE
+
+Route Listing
+
+---
+
+##🗄️ Database Schema
+Column	Type	Constraints
+id	BIGINT	Primary Key
+name	VARCHAR	Required
+email	VARCHAR	Required, Unique
+phone	VARCHAR	Optional
+created_at	TIMESTAMP	Auto
+updated_at	TIMESTAMP	Auto
+
+---
+
+git clone https://github.com/nsneha16/fretbox-laravel-intern-task.git
+cd fretbox-laravel-intern-task
+composer install
+cp .env.example .env
+php artisan key:generate
+
+# Update .env with MySQL database credentials
+
+php artisan migrate
+php artisan serve
+Application will be available at:
+👉 http://127.0.0.1:8000
+
+---
+📬 Developer
+Sneha Namdeo
+🌐 GitHub: https://github.com/nsneha16
