@@ -46,55 +46,54 @@ This project demonstrates backend knowledge and Laravel fundamentals required fo
   "email": "sneha_n@example.com",
   "phone": "9876543210"
 }
-```
----
-##🧾 Screenshots (Proof of API Testing)
+## 🗄 Database Schema
 
-API Testing screenshots are included inside:
-
-📂 api-tests/
-
-Includes:
-
-POST (Add Friend)
-
-GET (List + Pagination)
-
-Search
-
-PUT (Update)
-
-DELETE
-
-Route Listing
+| Column | Type | Constraints |
+|--------|------|-------------|
+| id | BIGINT | Primary Key |
+| name | VARCHAR | Required |
+| email | VARCHAR | Required, Unique |
+| phone | VARCHAR | Optional |
+| created_at | TIMESTAMP | Auto |
+| updated_at | TIMESTAMP | Auto |
 
 ---
 
-##🗄️ Database Schema
-Column	Type	Constraints
-id	BIGINT	Primary Key
-name	VARCHAR	Required
-email	VARCHAR	Required, Unique
-phone	VARCHAR	Optional
-created_at	TIMESTAMP	Auto
-updated_at	TIMESTAMP	Auto
-
----
-
+## ▶️ Setup Instructions (Run Locally)
+```bash
 git clone https://github.com/nsneha16/fretbox-laravel-intern-task.git
 cd fretbox-laravel-intern-task
 composer install
 cp .env.example .env
 php artisan key:generate
+```
 
-# Update .env with MySQL database credentials
+🔹 Update `.env` with your MySQL database credentials
 
+Then run:
+```bash
 php artisan migrate
 php artisan serve
-Application will be available at:
-👉 http://127.0.0.1:8000
+```
+
+👉 Application URL: http://127.0.0.1:8000
 
 ---
-📬 Developer
-Sneha Namdeo
+
+## 🧾 API Testing Screenshots
+
+📂 `/api-tests/` folder contains proof of:
+- POST (Add Friend)
+- GET (Pagination)
+- Search Feature
+- PUT Update
+- DELETE
+- Route List
+
+---
+
+## 👩‍💻 Developer
+
+**Sneha Namdeo**  
+📍 India  
 🌐 GitHub: https://github.com/nsneha16
